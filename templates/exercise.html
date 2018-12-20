@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Exercise
+{% endblock %}
+
+{% block main %}
+    <form action="/exercise" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="activity" placeholder="Physical Activity" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="minutes" placeholder="Duration (in minutes)" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

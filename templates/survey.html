@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Wellness Survey
+{% endblock %}
+
+{% block main %}
+<body>
+       <h3> Take the survey below to calculate your wellness score and receive recommendations to improve!</h3> <br>
+
+<form action="/survey" method="post">
+        <div class="form-group">
+            1. How often would you describe yourself as stressed? <br>
+            <select question="q1">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <div class="form-group">
+            2. Approximately how often do you spend over 6 hours a day sitting? <br>
+            <select question="q2">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <div class="form-group">
+            3. How often do you drink 8 glasses of water or more in a day? <br>
+            <select question="q3">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <div class="form-group">
+            4. How often do you practice yoga or meditation? <br>
+            <select question="q4">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <div class="form-group">
+            5. How often do you spend 30 minutes or more being active? <br>
+            <select question="q5">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <div class="form-group">
+            6. How often do you eat 3 balanced meals a day (protein, vegetables, carbs)? <br>
+            <select question="q6">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <div class="form-group">
+            7. How often do you work out (cardio, weights, core, stretching)? <br>
+            <select question="q7">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <div class="form-group">
+            8. How often do you take time to do something you enjoy? <br>
+            <select question="q8">
+              <option value="a">Always</option>
+              <option value="b">Most of the time</option>
+              <option value="c">Sometimes</option>
+              <option value="d">Never</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+{% endblock %}

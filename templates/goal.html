@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Goal
+{% endblock %}
+
+{% block main %}
+    <form action="/goal" method="post">
+        <div class="form-group">
+            <input class="form-control" name="goal" placeholder="Target Health Level" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

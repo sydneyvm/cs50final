@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Diet
+{% endblock %}
+
+{% block main %}
+    <form action="/diet" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="food" placeholder="Food" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="cal" placeholder="Calories" type="number">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="fat" placeholder="Fat (in grams)" type="number">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="sugar" placeholder="Sugar (in grams)" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

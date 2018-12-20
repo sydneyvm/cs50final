@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<h2> Receive feedback on your health and wellness habits, and be inspired to stay fit while you care for a pet of your own!</h2>
+<h5> Petty allows you to enter data on your diet and exercise habits and complete a wellness survey, through which your pet's
+health will mirror your own! Receive updates on your pets' health and recommendations on how to improve. </h5> <br>
+
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Re-enter Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+    <script>
+        document.querySelector('form').onsubmit = function(x)
+        {
+            x.preventDefault();
+            $.get('/check', {username:document.querySelector('input[name=username]').value}, function(data)
+            {
+                if (data==false)
+                {
+                    alert("username taken");
+                }
+                else
+                {
+                    document.querySelector('form').submit();
+                }
+            });
+        };
+    </script>
+{% endblock %}
